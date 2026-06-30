@@ -56,9 +56,8 @@ df["Monthly_Salary"].fillna(df["Monthly_Salary"].mean(), inplace=True)
 print("\nAfter fillna()")
 print(df)
 
-# ---------------------------------
-# Step 6 : Drop Missing Values
-# ---------------------------------
+
+#  Drop Missing Values
 
 drop = df.dropna()
 
