@@ -46,9 +46,9 @@ df.rename(columns={"Salary":"MonthlySalary"}, inplace=True)
 print("\nRenaming")
 print(df.head())
 
-# ---------------------------------
-# Step 5 : Fill Missing Values
-# ---------------------------------
+
+#  Missing Values
+
 
 df["Age"].fillna(df["Age"].mean(), inplace=True)
 df["Monthly_Salary"].fillna(df["Monthly_Salary"].mean(), inplace=True)
@@ -65,18 +65,16 @@ drop = df.dropna()
 print("\nAfter dropna()")
 print(drop)
 
-# ---------------------------------
-# Step 7 : Delete Column
-# ---------------------------------
+#delet
 
 df1 = df.drop("City", axis=1)
 
 print("\nAfter Deleting City Column")
 print(df1.head())
 
-# ---------------------------------
-# Step 8 : Apply Function
-# ---------------------------------
+
+ # Function
+
 
 def salary_category(x):
     if x >= 60000:
